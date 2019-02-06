@@ -1,3 +1,10 @@
+const inputBlocks_to_resize=[];
+function resizerInputBlocks(){
+	for (var i=0;i<inputBlocks_to_resize.length;i=i+1){
+		inputBlocks_to_resize[i].resize();
+	}
+}
+window.addEventListener('resize',resizerInputBlocks);
 function inputBlock(placeholder,id){
 	let obj=document.createElement('section');
 	obj.id_APP=id;
@@ -38,7 +45,6 @@ function inputBlock(placeholder,id){
 		}
 		this.checkingArea.innerHTML=this.textarea.value;
 		blockInfo=this.checkingArea.getBoundingClientRect();
-		console.log(parseInt(blockInfo_css.getPropertyValue('max-height')));
 		if (blockInfo.height<parseInt(blockInfo_css.getPropertyValue('max-height'))){
 			this.textarea.style.overflowY='hidden';
 			this.checkingArea.style.overflowY='hidden';
@@ -61,9 +67,12 @@ function inputBlock(placeholder,id){
 	obj.onkeyup = function(){
 		this.makeSame_chekingArea();
 	}
+	obj.onkeypress = function(){
+		this.makeSame_chekingArea();
+	}
 	
 	
 	obj.change_placeholder(placeholder);
-	
+	inputBlocks_to_resize.push(obj);
 	return obj;
 }
