@@ -52,8 +52,8 @@ function checker(value,check,id){
 	}
 	
 	obj.changeCheck = function(){
-		this.shower.style.transition='0.32s';
-		this.insideSelector.style.transition='0.32s';
+		this.shower.style.transition='5';
+		this.insideSelector.style.transition='5';
 		if (this.check==false){this.shower.classList.add('checked');this.insideSelector.classList.add('checked');}else{this.shower.classList.remove('checked');this.insideSelector.classList.remove('checked');};
 		if(this.check==true){this.check=false;}else{this.check=true;}
 		this.resize();
@@ -61,7 +61,7 @@ function checker(value,check,id){
 		setTimeout(function(){
 			obj.shower.style.transition='0s'; 
 			obj.insideSelector.style.transition='0s'; 
-		},320);
+		},5000);
 	}
 	
 	obj.onclick = function(){
