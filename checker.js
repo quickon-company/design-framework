@@ -52,8 +52,8 @@ function checker(value,check,id){
 	}
 	
 	obj.changeCheck = function(){
-		this.shower.style.transition='5';
-		this.insideSelector.style.transition='5';
+		this.shower.style.transition='5s';
+		this.insideSelector.style.transition='5s';
 		if (this.check==false){this.shower.classList.add('checked');this.insideSelector.classList.add('checked');}else{this.shower.classList.remove('checked');this.insideSelector.classList.remove('checked');};
 		if(this.check==true){this.check=false;}else{this.check=true;}
 		this.resize();
