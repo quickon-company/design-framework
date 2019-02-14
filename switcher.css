@@ -1,0 +1,34 @@
+                         
+						/*DESIGNER it's for you */
+.switcher section.text{
+	margin-left: 10px;
+	color:white;
+}
+.switcher section.text.checked{
+	margin-left: 20px;
+}
+.switcher section.shower{
+	background-color:white;
+	border-radius:100% 100% 100% 100%;
+	background-color:white;
+	max-height:80px;
+}
+.switcher section.shower.checked{
+	background-color:rgb(211, 119, 96);
+}
+.switcher{
+	background-color:rgb(58, 58, 58);
+	font-size:30px;
+	font-family:Calibri;
+	padding:10px;
+	border-radius:5px;
+	margin:10px;
+	cursor:pointer;
+}
+/* For Mobile */
+@media screen and (max-width: 540px) {
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {	
+}
