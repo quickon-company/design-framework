@@ -61,11 +61,12 @@ function switcher(value,check,id){
 			let changeInHeight=height-parseInt(this.shower.style.height);
 			this.shower.style.width=this.shower.style.height;
 			this.shower.style.marginTop=changeInHeight/2+'px';
+			this.shower.style.marginRight=changeInHeight/2+'px';
 		}else{
 			this.shower.style.height=height-1+'px';
 			this.shower.style.width=this.shower.style.height;
 			this.shower.style.marginTop=0+'px';
-			
+			this.shower.style.marginRight=0+'px';
 		}
 	}
 	
