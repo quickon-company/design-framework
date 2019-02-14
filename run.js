@@ -1,7 +1,7 @@
-let block= checker('Hello',false);
+let block= switcher('s',false);
 document.body.appendChild(block);
 block.show();
 
-block=inputBlock('Type...');
+/*block=inputBlock('','Type...');
 document.body.appendChild(block);
-block.show();
+block.show();*/
